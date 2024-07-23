@@ -11,8 +11,8 @@
 	<extension point="xbmc.subtitle.module"
              library="service.py" />
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">OpenSubtitles.com</summary>
-		<description lang="en_GB">Search and download subtitles for movies and TV-Series from OpenSubtitles.com. Search in 75 languages, 6.000.000+ subtitles, daily updates. Register/Import your account on OpenSubtitles.com before use.</description>
+		<summary lang="en_GB">subdl.com</summary>
+		<description lang="en_GB">Search and download subtitles for movies and TV-Series from subdl.com. Search in 75 languages, 6.000.000+ subtitles, daily updates. Register/Import your account on subdl.com before use.</description>
 		<description lang="ast_ES">Pelis and Subtítulos TV en munches llingües, milenta de subtítulos traducíos y xubíos caldía. Descarga llibre dende la fonte, sofitu API, millones d'usuarios.</description>
 		<description lang="br_FR">Istitloù Filmoù ha TV e meur a yezh, miliadoù a istitloù troet hag uskarget bemdez. Pellgargadenn digoust diouzh ar vammenn, skoazell an API, millionoù a implijerien.</description>
 		<description lang="ca_ES">Subtítols de films i televisió en múltiples idiomes, milers de subtítols traduïts carregats diàriament. Descàrrega gratuïta des de la font, suport de l'API, amb milions d'usuaris.</description>
@@ -51,7 +51,7 @@
 		<description lang="tr_TR">Her gün eklenen, pek çok dildeki binlerce film ve dizi altyazısı. Kaynağından ücretsiz indirme, API desteği ve milyonlarca kullanıcı.</description>
 		<description lang="uz_UZ">Film va TV Taglavhalari ko'p tillarda, minglab tarjima qilingan taglavhalar har kuni tizimga yuklanadi. Bepul resursdan yuklab oling, API qo'llaydi, millionlab foydalanuvchilar.</description>
 		<description lang="zh_CN">多语种的电影及剧集字幕，每日更新千余条翻译好的字幕。免费下载，提供API接口，已拥有上百万的用户。</description>
-		<disclaimer lang="en_GB">Users need to provide OpenSubtitles.com username and password in add-on configuration. This is our new extension, old opensubtitles.org will not work on this, but the account can be easily imported on opensubtitles.com.</disclaimer>
+		<disclaimer lang="en_GB">Users need to provide subdl.com username and password in add-on configuration. This is our new extension, old subdl.org will not work on this, but the account can be easily imported on subdl.com.</disclaimer>
 		<news>
 v1.0.4 (2024-01-15)
 - Sanitize language query
@@ -71,9 +71,9 @@ v1.0.1 (2023-07-28)
 		</news>
 		<platform>all</platform>
 		<license>GPL-2.0-only</license>
-		<forum>https://forum.opensubtitles.com/t/new-kodi-extension/1673</forum>
-		<website>https://www.opensubtitles.com/en</website>
-		<email>cto [at] opensubtitles {dot} org</email>
+		<forum></forum>
+		<website></website>
+		<email></email>
 		<assets>
 			<icon>resources/media/os_logo_512x512.png</icon>
 			<fanart>resources/media/os_fanart.jpg</fanart>
@@ -81,6 +81,6 @@ v1.0.1 (2023-07-28)
 			<screenshot>resources/media/screenshot_2.jpg</screenshot>
 			<screenshot>resources/media/screenshot_3.jpg</screenshot>
 		</assets>
-		<source>https://github.com/opensubtitlesdev/service.subtitles.opensubtitles-com</source>
+		<source></source>
 	</extension>
 </addon>
