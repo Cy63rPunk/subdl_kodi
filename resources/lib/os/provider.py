@@ -55,16 +55,16 @@ class SubtitlesProvider:
 
     def parse_filename(self, filename):
         clean_name = re.sub(r'\.\d+p.*|\.(mkv|avi|mp4)$', '', filename)
+        # Extract year before it is removed from clean_name
+        year_match = re.search(r'\b(19[0-9]{2}|20[0-9]{2})\b', clean_name)
+        year = year_match.group(0) if year_match else None
+        # Resume clean name
         clean_name = re.sub(r'\(.*?\)', '', clean_name).strip()
         # Replace dots that are likely separators (not part of abbreviations)
         # Replace a dot if it's followed by an uppercase letter or at the end of the name
         clean_name = re.sub(r'\.(?=[A-Z])', ' ', clean_name)
         clean_name = re.sub(r'\.', ' ', clean_name)  # Replace remaining dots that might be separators
-        clean_name = re.sub(r'\s+', ' ', clean_name)  
-
-        # Extract year
-        year_match = re.search(r'\b(19[0-9]{2}|20[0-9]{2})\b', clean_name)
-        year = year_match.group(0) if year_match else None
+        clean_name = re.sub(r'\s+', ' ', clean_name)
 
         # Check for series and season/episode
         series_match = re.search(r'[sS]?(\d+)[eExX](\d+)', filename, re.IGNORECASE)
