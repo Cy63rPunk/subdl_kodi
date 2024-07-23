@@ -67,12 +67,12 @@ class SubtitlesProvider:
         year = year_match.group(0) if year_match else None
 
         # Check for series and season/episode
-        series_match = re.search(r'S(\d+)E(\d+)', filename, re.IGNORECASE)
+        series_match = re.search(r'[sS]?(\d+)[eExX](\d+)', filename, re.IGNORECASE)
         if series_match:
             type_content = 'tv'
             seasonIdx = series_match.group(1)
             episodeIdx = series_match.group(2)
-            title = re.sub(r'\s*S\d+E\d+.*', '', clean_name[:year_match.start() if year_match else None]).strip()
+            title = re.sub(r'\s*\W\s?[sS]?\d+[eExX]\d+.*', '', clean_name[:year_match.start() if year_match else None]).strip()
             title = title.rstrip('.').rstrip()
         else:
             type_content = 'movie'
