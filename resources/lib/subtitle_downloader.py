@@ -36,6 +36,7 @@ class SubtitleDownloader:
 
         self.api_key = __addon__.getSetting("APIKey")
         self.tmdb_api_key = __addon__.getSetting("TMDBApiKey")
+        self.searchLanguage = __addon__.getSetting("searchLanguage")
 
         log(__name__, sys.argv)
 
@@ -47,7 +48,7 @@ class SubtitleDownloader:
         self.file = {}
 
         try:
-            self.open_subtitles = SubtitlesProvider(self.api_key, self.tmdb_api_key)
+            self.open_subtitles = SubtitlesProvider(self.api_key, self.tmdb_api_key, self.searchLanguage)
         except ConfigurationError as e:
             error(__name__, 32002, e)
 
@@ -81,7 +82,10 @@ class SubtitleDownloader:
             self.subtitles = self.open_subtitles.search_subtitles(media_data)
         # TODO handle errors individually. Get clear error messages to the user
         except (TooManyRequests, ServiceUnavailable, ProviderError, ValueError) as e:
-            error(__name__, 32001, e)
+            if (str(e) == "can't find movie or tv"):
+                error(__name__, 40001, e)
+            else:
+                error(__name__, 32001, e)
 
         if self.subtitles and len(self.subtitles):
             log(__name__, len(self.subtitles))
@@ -117,14 +121,31 @@ class SubtitleDownloader:
 
 
     def list_subtitles(self):
+        self.showComments = __addon__.getSetting("showComments")
+        log(__name__, "XYXYXX showComments '%s' " % self.showComments)
         if self.subtitles:
             for subtitle in self.subtitles:
-                language = convert_language(subtitle["language"], True)
-                file_name = subtitle["release_name"]
-                list_item = xbmcgui.ListItem(label=language,
-                                             label2=file_name)
-                url = "plugin://" + __scriptid__ + "/?action=download&id=" + subtitle["url"]
-                list_item.setArt({
-                    "thumb": get_flag(subtitle["language"])})
-                xbmcplugin.addDirectoryItem(handle=self.handle, url=url, listitem=list_item, isFolder=False)
+                if "releases" in subtitle.keys():
+                    for release in subtitle["releases"]:
+                        language = convert_language(subtitle["language"], True)
+                        file_name = release
+                        if subtitle["comment"] != '' and self.showComments == '1':
+                            file_name += "[CR]" + subtitle["comment"]
+                        list_item = xbmcgui.ListItem(label=language, label2=file_name)
+                        url = "plugin://" + __scriptid__ + "/?action=download&id=" + subtitle["url"]
+                        list_item.setArt({"thumb": get_flag(subtitle["language"])})
+                        list_item.setProperty( "hearing_imp", ("false", "true")[int(subtitle["hi"]) != 0] )
+                        xbmcplugin.addDirectoryItem(handle=self.handle, url=url, listitem=list_item, isFolder=False)
+                else:
+                    language = convert_language(subtitle["language"], True)
+                    # file_name = subtitle['release_name'].replace(".", " ")
+                    # file_name = subtitle['release_name'].replace(".", " ") + " (" + subtitle["author"] + ": " + subtitle["comment"] + ")"
+                    file_name = subtitle['release_name']
+                    if subtitle["comment"] != '' and self.showComments == '1':
+                            file_name += "[CR]" + subtitle["comment"]
+                    list_item = xbmcgui.ListItem(label=language, label2=file_name)
+                    url = "plugin://" + __scriptid__ + "/?action=download&id=" + subtitle["url"]
+                    list_item.setArt({"thumb": get_flag(subtitle["language"])})
+                    list_item.setProperty( "hearing_imp", ("false", "true")[int(subtitle["hi"]) != 0] )
+                    xbmcplugin.addDirectoryItem(handle=self.handle, url=url, listitem=list_item, isFolder=False)
         xbmcplugin.endOfDirectory(self.handle)
