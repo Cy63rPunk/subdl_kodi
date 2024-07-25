@@ -3,13 +3,117 @@
     <section id="service.subtitles.subdl">
         <category id="user" label="32101">
             <group id="1">
-                <setting id="TMDBApiKey" type="string">
-                    <level>4</level>
-                    <default>c3475734910bdff3c5438b9e6db991ca</default>
+                <setting id="TMDBApiKey" type="string" label="32204" help="">
+                    <level>0</level>
+                    <default>ENTER-YOUR-TMDB-API-KEY</default>
+                    <constraints>
+                        <allowempty>false</allowempty>
+                    </constraints>
+                    <control type="edit" format="string">
+                        <heading>32204</heading>
+                    </control>
                 </setting>
-                <setting id="APIKey" type="string">
-                    <level>4</level>
-                    <default>ihGUjWUZckyjq_MA7eOC0Kk6IMfhbB9O</default>
+                <setting id="APIKey" type="string" label="32205" help="">
+                    <level>0</level>
+                    <default>ENTER-YOUR-SUBDL-API-KEY</default>
+                    <constraints>
+                        <allowempty>false</allowempty>
+                    </constraints>
+                    <control type="edit" format="string">
+                        <heading>32205</heading>
+                    </control>
+                </setting>
+            </group>
+        </category>
+        <category id="search" label="32102">
+            <group id="2">
+                <setting id="searchLanguage" type="string" label="32206" help="">
+                    <level>0</level>
+                    <default>EN</default>
+                    <constraints>
+                        <options>
+                            <option label="100">AR</option>
+                            <option label="101">BR_PT</option>
+                            <option label="102">DA</option>
+                            <option label="103">NL</option>
+                            <option label="104">EN</option>
+                            <option label="105">FA</option>
+                            <option label="106">FI</option>
+                            <option label="107">FR</option>
+                            <option label="108">ID</option>
+                            <option label="109">IT</option>
+                            <option label="110">NO</option>
+                            <option label="111">RO</option>
+                            <option label="112">ES</option>
+                            <option label="113">SV</option>
+                            <option label="114">VI</option>
+                            <option label="115">SQ</option>
+                            <option label="116">AZ</option>
+                            <option label="117">BE</option>
+                            <option label="118">BN</option>
+                            <option label="119">ZH_BG</option>
+                            <option label="120">BS</option>
+                            <option label="121">BG</option>
+                            <option label="122">BG_EN</option>
+                            <option label="123">MY</option>
+                            <option label="124">CA</option>
+                            <option label="125">ZH</option>
+                            <option label="126">HR</option>
+                            <option label="127">CS</option>
+                            <option label="128">NL_EN</option>
+                            <option label="129">EN_DE</option>
+                            <option label="130">EO</option>
+                            <option label="131">ET</option>
+                            <option label="132">KA</option>
+                            <option label="133">DE</option>
+                            <option label="134">EL</option>
+                            <option label="135">KL</option>
+                            <option label="136">HE</option>
+                            <option label="137">HI</option>
+                            <option label="138">HU</option>
+                            <option label="139">HU_EN</option>
+                            <option label="140">IS</option>
+                            <option label="141">JA</option>
+                            <option label="142">KO</option>
+                            <option label="143">KU</option>
+                            <option label="144">LV</option>
+                            <option label="145">LT</option>
+                            <option label="146">MK</option>
+                            <option label="147">MS</option>
+                            <option label="148">ML</option>
+                            <option label="149">MNI</option>
+                            <option label="150">PL</option>
+                            <option label="151">PT</option>
+                            <option label="152">RU</option>
+                            <option label="153">SR</option>
+                            <option label="154">SI</option>
+                            <option label="155">SK</option>
+                            <option label="156">SL</option>
+                            <option label="157">TL</option>
+                            <option label="158">TA</option>
+                            <option label="159">TE</option>
+                            <option label="160">TH</option>
+                            <option label="161">TR</option>
+                            <option label="162">UK</option>
+                            <option label="163">UR</option>
+                        </options>
+                    </constraints>
+                    <control type="list" format="string">
+                        <heading>32206</heading>
+                    </control>
+                </setting>
+                <setting id="showComments" type="string" label="32207" help="">
+                    <level>0</level>
+                    <default>1</default>
+                    <constraints>
+                        <options>
+                            <option label="200">1</option>
+                            <option label="201">0</option>
+                        </options>
+                    </constraints>
+                    <control type="list" format="string">
+                        <heading>32207</heading>
+                    </control>
                 </setting>
             </group>
         </category>
