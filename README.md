@@ -5,6 +5,7 @@ Configure the API Keys in addon settings.
 Or
 
 Change the TMDB API in service.subtitles.subdl-com\resources\settings.xml at line 8.
+
 Change the SubDL API in service.subtitles.subdl-com\resources\settings.xml at line 18.
 
 Forked from https://github.com/duytim/subdl_kodi
