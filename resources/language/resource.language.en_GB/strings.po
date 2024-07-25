@@ -12,12 +12,276 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgctxt "#100"
+msgid "Arabic"
+msgstr ""
+
+msgctxt "#101"
+msgid "Brazillian Portuguese"
+msgstr ""
+
+msgctxt "#102"
+msgid "Danish"
+msgstr ""
+
+msgctxt "#103"
+msgid "Dutch"
+msgstr ""
+
+msgctxt "#104"
+msgid "English"
+msgstr ""
+
+msgctxt "#105"
+msgid "Farsi_Persian"
+msgstr ""
+
+msgctxt "#106"
+msgid "Finnish"
+msgstr ""
+
+msgctxt "#107"
+msgid "French"
+msgstr ""
+
+msgctxt "#108"
+msgid "Indonesian"
+msgstr ""
+
+msgctxt "#109"
+msgid "Italian"
+msgstr ""
+
+msgctxt "#110"
+msgid "Norwegian"
+msgstr ""
+
+msgctxt "#111"
+msgid "Romanian"
+msgstr ""
+
+msgctxt "#112"
+msgid "Spanish"
+msgstr ""
+
+msgctxt "#113"
+msgid "Swedish"
+msgstr ""
+
+msgctxt "#114"
+msgid "Vietnamese"
+msgstr ""
+
+msgctxt "#115"
+msgid "Albanian"
+msgstr ""
+
+msgctxt "#116"
+msgid "Azerbaijani"
+msgstr ""
+
+msgctxt "#117"
+msgid "Belarusian"
+msgstr ""
+
+msgctxt "#118"
+msgid "Bengali"
+msgstr ""
+
+msgctxt "#119"
+msgid "Big 5 code"
+msgstr ""
+
+msgctxt "#120"
+msgid "Bosnian"
+msgstr ""
+
+msgctxt "#121"
+msgid "Bulgarian"
+msgstr ""
+
+msgctxt "#122"
+msgid "Bulgarian_English"
+msgstr ""
+
+msgctxt "#123"
+msgid "Burmese"
+msgstr ""
+
+msgctxt "#124"
+msgid "Catalan"
+msgstr ""
+
+msgctxt "#125"
+msgid "Chinese BG code"
+msgstr ""
+
+msgctxt "#126"
+msgid "Croatian"
+msgstr ""
+
+msgctxt "#127"
+msgid "Czech"
+msgstr ""
+
+msgctxt "#128"
+msgid "Dutch_English"
+msgstr ""
+
+msgctxt "#129"
+msgid "English_German"
+msgstr ""
+
+msgctxt "#130"
+msgid "Esperanto"
+msgstr ""
+
+msgctxt "#131"
+msgid "Estonian"
+msgstr ""
+
+msgctxt "#132"
+msgid "Georgian"
+msgstr ""
+
+msgctxt "#133"
+msgid "German"
+msgstr ""
+
+msgctxt "#134"
+msgid "Greek"
+msgstr ""
+
+msgctxt "#135"
+msgid "Greenlandic"
+msgstr ""
+
+msgctxt "#136"
+msgid "Hebrew"
+msgstr ""
+
+msgctxt "#137"
+msgid "Hindi"
+msgstr ""
+
+msgctxt "#138"
+msgid "Hungarian"
+msgstr ""
+
+msgctxt "#139"
+msgid "Hungarian_English"
+msgstr ""
+
+msgctxt "#140"
+msgid "Icelandic"
+msgstr ""
+
+msgctxt "#141"
+msgid "Japanese"
+msgstr ""
+
+msgctxt "#142"
+msgid "Korean"
+msgstr ""
+
+msgctxt "#143"
+msgid "Kurdish"
+msgstr ""
+
+msgctxt "#144"
+msgid "Latvian"
+msgstr ""
+
+msgctxt "#145"
+msgid "Lithuanian"
+msgstr ""
+
+msgctxt "#146"
+msgid "Macedonian"
+msgstr ""
+
+msgctxt "#147"
+msgid "Malay"
+msgstr ""
+
+msgctxt "#148"
+msgid "Malayalam"
+msgstr ""
+
+msgctxt "#149"
+msgid "Manipuri"
+msgstr ""
+
+msgctxt "#150"
+msgid "Polish"
+msgstr ""
+
+msgctxt "#151"
+msgid "Portuguese"
+msgstr ""
+
+msgctxt "#152"
+msgid "Russian"
+msgstr ""
+
+msgctxt "#153"
+msgid "Serbian"
+msgstr ""
+
+msgctxt "#154"
+msgid "Sinhala"
+msgstr ""
+
+msgctxt "#155"
+msgid "Slovak"
+msgstr ""
+
+msgctxt "#156"
+msgid "Slovenian"
+msgstr ""
+
+msgctxt "#157"
+msgid "Tagalog"
+msgstr ""
+
+msgctxt "#158"
+msgid "Tamil"
+msgstr ""
+
+msgctxt "#159"
+msgid "Telugu"
+msgstr ""
+
+msgctxt "#160"
+msgid "Thai"
+msgstr ""
+
+msgctxt "#161"
+msgid "Turkish"
+msgstr ""
+
+msgctxt "#162"
+msgid "Ukranian"
+msgstr ""
+
+msgctxt "#163"
+msgid "Urdu"
+msgstr ""
+
+msgctxt "#200"
+msgid "Yes"
+msgstr ""
+
+msgctxt "#201"
+msgid "No"
+msgstr ""
+
 msgctxt "#32001"
 msgid "Error searching for subtitles"
 msgstr ""
 
 msgctxt "#32002"
-msgid "Plugin is not properly configured, insert valid OpenSubtitles.com username and password."
+msgid "Plugin is not properly configured, insert valid SubDL and TMDB API Key."
 msgstr ""
 
 msgctxt "#32003"
@@ -33,7 +297,15 @@ msgid "You have reached OpenSubtitles.com download limit for unauthenticated use
 msgstr ""
 
 msgctxt "#32101"
-msgid "Login Details"
+msgid "API Keys"
+msgstr ""
+
+msgctxt "#32102"
+msgid "Search"
+msgstr ""
+
+msgctxt "#32207"
+msgid "Show comments"
 msgstr ""
 
 msgctxt "#32201"
@@ -46,6 +318,18 @@ msgstr ""
 
 msgctxt "#32203"
 msgid "API Key"
+msgstr ""
+
+msgctxt "#32204"
+msgid "TMDB API Key"
+msgstr ""
+
+msgctxt "#32205"
+msgid "SubDL API Key"
+msgstr ""
+
+msgctxt "#32206"
+msgid "Subtitle language"
 msgstr ""
 
 msgctxt "#32102"
@@ -66,4 +350,8 @@ msgstr ""
 
 msgctxt "#32214"
 msgid "Bad username. Make sure you have entered your username and not your email in the username field."
+msgstr ""
+
+msgctxt "#40001"
+msgid "Movie or TV Show not found"
 msgstr ""
