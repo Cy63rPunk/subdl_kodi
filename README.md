@@ -1,28 +1,14 @@
-Add-on only supports Vietnamese subtitles
+Default subtitle language for the search is EN, other language can be configured in the addon settings.
 
-Change the language subtitles in service.subtitles.subdl-com\resources\lib\os\provider.py at line 105.
+Configure the API Keys in addon settings.
 
-```
-url = f"{API_URL}?api_key={self.api_key}&type={metadata['type']}&languages=VI&tmdb_id={tmdbID}"
-```
-List all language
-https://subdl.com/api-files/language_list.json
+Or
 
-Change the subdl API in service.subtitles.subdl-com\resources\settings.xml at line 12.
+Change the TMDB API in service.subtitles.subdl-com\resources\settings.xml at line 8.
+Change the SubDL API in service.subtitles.subdl-com\resources\settings.xml at line 18.
 
-```
-                <setting id="TMDBApiKey" type="string">
-                    <level>4</level>
-                    <default>YOUR_API_TMDB</default>
-                </setting>
-                <setting id="APIKey" type="string">
-                    <level>4</level>
-                    <default>YOUR_API_SUBDL</default>
-                </setting>
-```
-
-
-Source: https://github.com/opensubtitlesdev/service.subtitles.opensubtitles-com
+Forked from https://github.com/duytim/subdl_kodi
+witch used the source: https://github.com/opensubtitlesdev/service.subtitles.opensubtitles-com
 
 SubDL API-Key: https://subdl.com/panel/api
 ThemovieDB API-Key: https://www.themoviedb.org/settings/api
@@ -30,5 +16,3 @@ ThemovieDB API-Key: https://www.themoviedb.org/settings/api
 ![App Screenshot](https://i.postimg.cc/L4QCZxJr/Screenshot-2024-05-13-at-08-57-23.png)
 
 ![App Screenshot](https://i.postimg.cc/vH1P759D/Screenshot-2024-05-13-at-08-58-16.png)
-
-
