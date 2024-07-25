@@ -22,7 +22,7 @@ def logging(msg):
 
 
 class SubtitlesProvider:
-    def __init__(self, api_key, tmdb_api_key):
+    def __init__(self, api_key, tmdb_api_key, searchLanguage):
 
         if not api_key:
             raise ConfigurationError("SubDL API must be specified")
@@ -31,6 +31,7 @@ class SubtitlesProvider:
 
         self.api_key = api_key
         self.tmdb_api_key = tmdb_api_key
+        self.searchLanguage = searchLanguage
         self.request_headers = {"Content-Type": CONTENT_TYPE, "Accept": CONTENT_TYPE}
         self.session = Session()
         self.session.headers = self.request_headers
@@ -102,10 +103,15 @@ class SubtitlesProvider:
     def search_subtitles(self, media_data: dict):
         metadata = self.parse_filename(media_data['query'])
         tmdbID = self.get_tmdb_id(metadata)
-        url = f"{API_URL}?api_key={self.api_key}&type={metadata['type']}&languages=EN&tmdb_id={tmdbID}"
+        url = f"{API_URL}?api_key={self.api_key}&type={metadata['type']}&languages={self.searchLanguage}&subs_per_page=30&tmdb_id={tmdbID}"
+        url += f"&releases=1"
+        url += f"&comment=1"
         if metadata['type'] == 'tv':
             url += f"&season_number={metadata['season_number']}&episode_number={metadata['episode_number']}"
         result = self.handle_request(url)
+        logging(f"Query result {result}")
+        if result['status'] == False:
+            raise ProviderError(result['error'])
         if "subtitles" not in result:
             raise ProviderError("Invalid JSON returned by provider")
         logging(f"Query returned {len(result['subtitles'])} subtitles")
