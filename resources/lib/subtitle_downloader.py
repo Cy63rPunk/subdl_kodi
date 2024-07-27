@@ -129,7 +129,7 @@ class SubtitleDownloader:
                     for release in subtitle["releases"]:
                         language = convert_language(subtitle["language"], True)
                         file_name = release
-                        if subtitle["comment"] != '' and self.showComments == '1':
+                        if subtitle["comment"] != '' and self.showComments == 'true':
                             file_name += "[CR]" + subtitle["comment"]
                         list_item = xbmcgui.ListItem(label=language, label2=file_name)
                         url = "plugin://" + __scriptid__ + "/?action=download&id=" + subtitle["url"]
@@ -141,7 +141,7 @@ class SubtitleDownloader:
                     # file_name = subtitle['release_name'].replace(".", " ")
                     # file_name = subtitle['release_name'].replace(".", " ") + " (" + subtitle["author"] + ": " + subtitle["comment"] + ")"
                     file_name = subtitle['release_name']
-                    if subtitle["comment"] != '' and self.showComments == '1':
+                    if subtitle["comment"] != '' and self.showComments == 'true':
                             file_name += "[CR]" + subtitle["comment"]
                     list_item = xbmcgui.ListItem(label=language, label2=file_name)
                     url = "plugin://" + __scriptid__ + "/?action=download&id=" + subtitle["url"]
