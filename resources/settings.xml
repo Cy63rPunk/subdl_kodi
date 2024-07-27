@@ -102,18 +102,10 @@
                         <heading>32206</heading>
                     </control>
                 </setting>
-                <setting id="showComments" type="string" label="32207" help="">
+                <setting id="showComments" type="boolean" label="32207" help="">
                     <level>0</level>
-                    <default>1</default>
-                    <constraints>
-                        <options>
-                            <option label="200">1</option>
-                            <option label="201">0</option>
-                        </options>
-                    </constraints>
-                    <control type="list" format="string">
-                        <heading>32207</heading>
-                    </control>
+                    <default>true</default>
+                    <control type="toggle"/>
                 </setting>
             </group>
         </category>
