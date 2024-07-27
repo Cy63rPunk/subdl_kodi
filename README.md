@@ -8,7 +8,7 @@ Change the TMDB API in service.subtitles.subdl-com\resources\settings.xml at lin
 Change the SubDL API in service.subtitles.subdl-com\resources\settings.xml at line 18.
 
 Forked from https://github.com/duytim/subdl_kodi
-wich used the source: https://github.com/opensubtitlesdev/service.subtitles.opensubtitles-com
+which used the source: https://github.com/opensubtitlesdev/service.subtitles.opensubtitles-com
 
 SubDL API-Key: https://subdl.com/panel/api
 ThemovieDB API-Key: https://www.themoviedb.org/settings/api
