@@ -79,7 +79,7 @@ class SubtitleDownloader:
 
 
         try:
-            self.subtitles = self.open_subtitles.search_subtitles(media_data)
+            self.subtitles = self.open_subtitles.search_subtitles(media_data, language_data)
         # TODO handle errors individually. Get clear error messages to the user
         except (TooManyRequests, ServiceUnavailable, ProviderError, ValueError) as e:
             if (str(e) == "can't find movie or tv"):
