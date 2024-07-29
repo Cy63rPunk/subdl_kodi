@@ -1,7 +1,7 @@
 Default subtitle languages for the search are taken from the Kodi player subtitle settings.  
 Found languages will be tested against supported languages from subdl.com.  
 If all languages are not supported the language from addon settings is used.  
-Default langauge in addon settings is EN (english).
+Default language in addon settings is EN (english).
 
 Configure the API Keys in addon settings.
 
