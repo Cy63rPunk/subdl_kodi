@@ -67,7 +67,7 @@ def get_language_data(params):
 
     if preferred_language and preferred_language not in search_languages and preferred_language != "Unknown"  and preferred_language != "Undetermined":
         search_languages.append(preferred_language)
-        search_languages_str=search_languages_str+","+preferred_language
+        search_languages_str=search_languages_str+","+preferred_language.upper()
 
     """ should implement properly as fallback, not additional language, leave it for now
     """
@@ -82,9 +82,9 @@ def get_language_data(params):
         if lang:
             log(__name__, f"Language  found: '{lang}' search_languages_str:'{search_languages_str}")
             if search_languages_str=="":
-                search_languages_str=lang
+                search_languages_str=lang.upper()
             else:
-                search_languages_str=search_languages_str+","+lang
+                search_languages_str=search_languages_str+","+lang.upper()
         #item["languages"].append(lang)
             #if search_languages_str=="":
             #    search_languages_str=lang
