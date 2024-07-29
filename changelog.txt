@@ -1,3 +1,10 @@
+v1.0.21
+- use preferred Languages from player settings
+- language in addon settings as fallback
+
+v1.0.20
+- changed comments option from select to switch
+
 v1.0.12 - v1.0.19
 - bugfixes
 
