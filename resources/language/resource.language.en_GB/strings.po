@@ -329,7 +329,7 @@ msgid "SubDL API Key"
 msgstr ""
 
 msgctxt "#32206"
-msgid "Subtitle language"
+msgid "Subtitle language (fallback)"
 msgstr ""
 
 msgctxt "#32102"
