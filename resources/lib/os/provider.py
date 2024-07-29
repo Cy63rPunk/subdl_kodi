@@ -100,10 +100,23 @@ class SubtitlesProvider:
             raise ProviderError("Invalid JSON returned by provider")
         return data["results"][0]["id"]
 
-    def search_subtitles(self, media_data: dict):
+    def search_subtitles(self, media_data: dict, language_data: dict):
+        result = self.handle_request('https://subdl.com/api-files/language_list.json')
+        languageArray = language_data['languages'].split(',')
+        searchLanguage = ''
+        for sprache in languageArray:
+            if sprache in result:
+                if searchLanguage == '':
+                    searchLanguage = sprache
+                else:
+                    searchLanguage = searchLanguage+','+sprache
+
+        if searchLanguage == '':
+            searchLanguage = self.searchLanguage
+
         metadata = self.parse_filename(media_data['query'])
         tmdbID = self.get_tmdb_id(metadata)
-        url = f"{API_URL}?api_key={self.api_key}&type={metadata['type']}&languages={self.searchLanguage}&subs_per_page=30&tmdb_id={tmdbID}"
+        url = f"{API_URL}?api_key={self.api_key}&type={metadata['type']}&languages={searchLanguage}&subs_per_page=30&tmdb_id={tmdbID}"
         url += f"&releases=1"
         url += f"&comment=1"
         if metadata['type'] == 'tv':
